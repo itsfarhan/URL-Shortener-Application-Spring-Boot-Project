@@ -1,0 +1,316 @@
+/* Global Styles */
+:root {
+    --primary-color: #0d6efd;
+    --primary-dark: #0b5ed7;
+    --secondary-color: #6c757d;
+    --dark-bg: #212529;
+    --light-bg: #f8f9fa;
+    --success-color: #198754;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base Elements */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Layout Components */
+.content-wrapper {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Navbar Customization */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px;
+    margin: 0 0.2rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.nav-link.active {
+    color: #fff !important;
+    background-color: var(--primary-color);
+}
+
+.nav-link i {
+    transition: transform 0.2s ease;
+}
+
+.nav-link:hover i {
+    transform: translateY(-2px);
+}
+
+/* URL Shortener Form Styles */
+.url-form {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.url-form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.url-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-bg);
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.shortened-url {
+    background-color: rgba(13, 110, 253, 0.1);
+    padding: 1.25rem;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    transition: var(--transition);
+}
+
+.shortened-url:hover {
+    background-color: rgba(13, 110, 253, 0.15);
+}
+
+.copy-btn {
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    padding: 0.6rem 1.75rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* URL List Styles */
+.url-list-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.url-list-item:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.url-stats {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Footer Customization */
+footer {
+    margin-top: auto;
+    padding: 1.5rem 0;
+    background-color: var(--dark-bg);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer .list-inline-item {
+    margin-right: 1rem;
+}
+
+footer .list-inline-item a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+}
+
+footer .list-inline-item a:hover {
+    color: #fff;
+}
+
+footer .list-inline-item a i {
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .url-form {
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.4rem 0.8rem !important;
+    }
+    
+    footer .col-md-6.text-md-end {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    footer .col-md-6.text-md-start {
+        text-align: center !important;
+    }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Page-Specific Styles */
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-page h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Error and Success Alerts */
+.alert {
+    border-radius: var(--border-radius);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.15);
+    color: var(--success-color);
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: var(--danger-color);
+}
+
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #856404;
+}

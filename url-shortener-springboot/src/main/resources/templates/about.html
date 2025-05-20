@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <div layout:fragment="content" class="about-page">
+        <h1>About URL Shortener</h1>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2>What is URL Shortener?</h2>
+                <p>URL Shortener is a web application that allows you to convert long URLs into shorter, more manageable links. 
+                These shortened links redirect to the original URL when accessed, making it easier to share links on social media, 
+                in emails, or through messaging platforms.</p>
+                
+                <h3 class="mt-4">Key Features</h3>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Shorten any valid URL</li>
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Track click statistics</li>
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Custom short URL aliases</li>
+                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> QR code generation</li>
+                </ul>
+                
+                <h3 class="mt-4">How It Works</h3>
+                <p>When you submit a URL to be shortened, our system generates a unique short code and stores it in our database 
+                along with your original URL. When someone visits the shortened link, our system looks up the original URL and 
+                redirects the visitor to the destination.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or feedback, please don't hesitate to reach out.</p>
+                <a href="#" class="btn btn-primary mt-2">
+                    <i class="fas fa-envelope me-2"></i>Contact Support
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
